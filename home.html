@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>For Thaw Tar Moe ❤️</title>
+
+<style>
+
+/* Background Style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background-image: url(2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Dark overlay so text is visible */
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+h1 {
+    font-size: 60px;
+    color: #87CEEB; /* blue */
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+p {
+    font-size: 20px;
+    color: #d2b48c; /* brown */
+    margin-bottom: 40px;
+}
+
+/* Button container */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Glass Buttons */
+button {
+    width: 260px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    backdrop-filter: blur(5px);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+    background: rgba(135, 206, 235, 0.6);
+    transform: scale(1.05);
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    bottom: -50px;
+    color: red;
+    font-size: 20px;
+    animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="13.mp3" type="audio/mpeg">
+</audio>
+
+<div class="overlay">
+
+<h1>Thaw Tar Moe💙</h1>
+
+<h2>HAPPY BIRTHDAY</h2>
+
+<div class="buttons">
+
+<button onclick="location.href='moments.html'">
+Moments of Us
+</button>
+
+<button onclick="location.href='alittle.html'">
+A little suprise
+</button>
+
+<button onclick="location.href='birthdaywish.html'">
+Birthday Wish Only For U
+</button>
+
+<button onclick="location.href='songs.html'">
+Song That Remind Me of You
+</button>
+
+</div>
+
+</div>
+
+<!-- Floating Hearts Script -->
+<script>
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+
+</html>

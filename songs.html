@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>For Thaw Tar Moe 💙🤎</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Card */
+.card {
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.12);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+/* Video */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #87CEEB;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a3d2b;
+    color: white;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    color: pink;
+    font-size: 20px;
+    animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>For Thaw Tar Moe 💙🤎</h1>
+
+<div class="container">
+
+<!-- Video Section -->
+<div class="card">
+    <h3>This song always remind me of u 🎥</h3>
+
+    <video controls>
+        <source src="12.mp4" type="video/mp4">
+    </video>
+
+    <p>မလိမ်ရက်ပါဘူး ဘယ်အချိန် ဘယ်နှခါ နားထောင်ထောင် မင်းကိုပဲ အရင်ပြေးမြင်မိတယ်</p>
+</div>
+
+<!-- Back Button -->
+<button onclick="location.href='home.html'">
+Back to Home 🏠
+</button>
+
+</div>
+
+<script>
+
+// floating hearts
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+
+</html>

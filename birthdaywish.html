@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Birthday Wish & Confession 💙🤎</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* Text area */
+.message {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.8;
+    backdrop-filter: blur(6px);
+    font-size: 18px;
+}
+
+/* Back button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #87CEEB;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a3d2b;
+    color: white;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    color: pink;
+    font-size: 18px;
+    animation: floatUp 18s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Floating whale */
+.whale {
+    position: absolute;
+    font-size: 40px;
+    animation: floatSide 15s linear infinite;
+}
+
+@keyframes floatSide {
+    0% {
+        left: -100px;
+        top: 70%;
+    }
+    100% {
+        left: 110%;
+        top: 60%;
+    }
+}
+
+/* Waves effect */
+.waves {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: rgba(135,206,235,0.2);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Birthday Wish 💙🤎</h1>
+
+<div class="message">
+
+<!-- WRITE YOUR MESSAGE HERE -->
+<p>
+ဟိတ် သော်သော် 💙,
+
+<br><br>
+
+ပထမဦးဆုံးအနေနဲ့ Happy birthday ကိုယ်သိပ်ချစ်ရတဲ့ Taurus လေး.  
+တစ်နှစ်ပတ်လုံး ဘယ်နေရာရောက်နေနေ ကိုယ့်ချစ်ခြင်း မေတ္တာတွေနဲ့ လွှမ်းခြုံပေးထားမှာမို့ အမြဲတမ်းဘေးမသီရန်မခပဲ
+ကိုယ်ချစ်ရတဲ့ မင်းလေး ချစ်ရတဲ့သူတွေနဲ့ အတူတူ ကျန်းကျန်းမာမာ ပျော်ပျော်ရွှင်ရွှင် ဖြတ်သန်းသွားရမယ်နော်
+<br><br>
+
+မှာစရာကတော့ အများကြီးမရှိပါဘူးရယ် လိမ္မာပေမယ့်
+တစ်ချို့နေရာလေးတွေကတော့ ဆိုးတာပဲ အမြဲတော့ ပြည့်စုံမနေနိုင်ဘူးလေ
+တို့သိတဲ့ သော်သော်လေးက စသိတည်းက နေ ခုချိန်ထိ အမြဲလှပပြီး 
+ပျော်ပျော်ရွှင်ရွှင်ရှိတယ့် အမျိုးသမီးလေးတစ်ယောက် တန်ဖိုးကြီးတဲ့ အမျိုးသမီးတစ်ဦး
+<br><br>
+ဒီလို ထူးခြားတဲ့ နေ့လေးမှာ အကောင်းမွန်ဆုံးဖြတ်သန်းနော် ဟုတ်ပြီလား
+<br><br>
+Happy Birthday in advance ❤️  
+ပြီးတော့ မှတ်ထား ဘယ်သူတွေဘာပြောပြော ဘာတွေဖြစ်ဖြစ်
+မင်းက ကိုယ့်အတွက် အထူးခြားဆုံးလေးပဲ
+
+</p>
+
+</div>
+
+<!-- Back button -->
+<div style="text-align:center;">
+<button onclick="location.href='home.html'">
+Back to Home 🏠
+</button>
+</button>
+</div>
+
+</div>
+
+<!-- Waves -->
+<div class="waves"></div>
+
+<!-- Floating hearts script -->
+<script>
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 15000);
+}
+
+setInterval(createHeart, 2000);
+
+
+
+</script>
+
+</body>
+
+</html>
